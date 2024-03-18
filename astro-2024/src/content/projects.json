@@ -1,9 +1,9 @@
 [
   {
-    "name": "Popban",
+    "name": "Popban - a Funko Pop ecommerce",
     "link": "https://popban.com",
     "image": "images/popban-screen.webp",
-    "description": "Popban an ecommerce specialized in Funko Pops",
+    "description": "It is a project that I single-handedly created and managed using WordPress and WooCommerce. Additionally, I utilized Google tools such as Analytics and AdWords for marketing and tracking purposes, ensuring effective marketing campaigns and accurate tracking of user behavior.",
     "stack": [
       "WORDPRESS"
     ]
