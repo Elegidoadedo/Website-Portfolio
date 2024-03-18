@@ -1,0 +1,23 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+---
+
+<section id="about">
+  <SectionTitle title="About me" icon="user" />
+  <section class="flex flex-wrap justify-between md:flex-nowrap gap-8">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+      asperiores impedit cupiditate natus quod officia distinctio, at repellat
+      quaerat exercitationem unde veritatis sunt porro consectetur provident
+      facilis in suscipit eos.
+    </p>
+    <picture>
+      <img
+        src="images/grey-photo.png"
+        alt="Profile picture"
+        class="rounded-lg rotate-6 hover:rotate-0 transition-transform duration-300 ease-in-out md:scale-110 md:hover:scale-105"
+        width="100%"
+      />
+    </picture>
+  </section>
+</section>

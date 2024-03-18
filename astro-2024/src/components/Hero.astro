@@ -1,0 +1,33 @@
+<div class="flex flex-wrap w-auto py-16 items-center justify-center gap-12">
+  <picture>
+    <img
+      width="200"
+      class="rounded-full"
+      src="images/colorfull-photo.jpeg"
+      alt="profile photo"
+    />
+  </picture>
+  <section>
+    <h2>Hello world! I'm jose.</h2>
+    <h1 class="glowText">Front-end Developer</h1>
+    <h2>Based in Barcelona</h2>
+  </section>
+</div>
+
+<style>
+  .glowText {
+    text-transform: uppercase;
+    color: #d69111;
+    animation: glow 1.5s ease-in-out infinite alternate;
+  }
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 20px #d69111;
+    }
+    to {
+      text-shadow:
+        0 0 30px #f7a815,
+        0 0 10px #e59b13;
+    }
+  }
+</style>

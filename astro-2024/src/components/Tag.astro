@@ -1,0 +1,22 @@
+---
+import WorpressIcon from "../assets/icons/WordpressIcon.astro";
+import type { Props } from "./Tag.types.ts";
+
+const IconsMapper = {
+  WORDPRESS: {
+    icon: WorpressIcon,
+    name: "Wordpress",
+    className: "bg-white text-black",
+  },
+};
+
+const { iconName } = Astro.props;
+const IconToRender = IconsMapper[iconName];
+---
+
+<span
+  class=`${IconToRender.className} flex gap-x-2 rounded-full text-xs py-1 px-2`
+>
+  <IconToRender.icon class="size-4" />
+  <span>{IconToRender.name}</span>
+</span>

@@ -1,0 +1,20 @@
+<p id="count-up" class=" co"></p>
+
+<script>
+  setInterval(() => {
+    const $countdown = document.querySelector("#count-up");
+    if (!$countdown) return;
+    const date = new Date();
+    const initialDate = new Date("01/01/2019");
+    const difference = Math.floor(date.getTime() - initialDate.getTime());
+    const years = `${Math.floor(difference / (1000 * 60 * 60 * 24 * 365))}`;
+    const days = `${Math.floor((difference / (1000 * 60 * 60 * 24)) % 365)}`;
+    const hours = `${Math.floor((difference / (1000 * 60 * 60)) % 24)}`;
+    const minutes = `${Math.floor((difference / 1000 / 60) % 60)}`;
+    const seconds = `${Math.floor((difference / 1000) % 60)}`;
+    return ($countdown.innerHTML = `${years} years, ${days} days, ${hours} : ${minutes} : ${seconds} h `);
+  }, 1000);
+</script>
+<style>
+
+</style>

@@ -1,0 +1,49 @@
+---
+import type { IconName } from "./Tag.types";
+import Tag from "./Tag.astro";
+type Props = {
+  name: string;
+  description: string;
+  link: string;
+  image: string;
+  tags: IconName[];
+};
+
+const { name, description, link, image } = Astro.props;
+console.log("props", Astro.props);
+---
+
+<article class="w-full p-8 flex flex-rap md:flex-nowrap card my-8 gap-4">
+  <section class="w-full md:w-1/2">
+    <picture>
+      <div
+        class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50"
+      >
+        <img
+          src={image}
+          class="object-cover object-top h-56 transition duration-500 sm:h-full md:scale-105 md:hover:scale-100"
+        />
+      </div>
+    </picture>
+  </section>
+  <section class="w-full md:w-1/2 flex flex-col">
+    <h4 class="text-xl font-bold mb-4">{name}</h4>
+    <p>{description}</p>
+    <ul class="flex flex-row mb-2 gap-x-2">
+      {
+        Astro.props.tags.map((tag) => (
+          <li>
+            <Tag iconName={tag} />
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <style>
+    .card {
+      border: 1px solid #d69111;
+      border-radius: 8px;
+    }
+  </style>
+</article>

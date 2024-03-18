@@ -1,0 +1,19 @@
+---
+import { sectionIcon } from "./sectionTitle.utils";
+const { title, icon, id } = Astro.props;
+
+const Icon = sectionIcon(icon);
+---
+
+<div id={id} class="flex gap-2 my-4 items-center sections-title w-fit pr-6">
+  <Icon />
+  <h3>
+    {title}
+  </h3>
+</div>
+
+<style>
+  .sections-title {
+    border-bottom: 1px solid #ddd;
+  }
+</style>
