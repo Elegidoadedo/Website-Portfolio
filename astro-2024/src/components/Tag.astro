@@ -1,0 +1,12 @@
+---
+import { IconsMapper } from "./Tag.utils.astro";
+import type { IconName, Props } from "./Tag.types.ts";
+
+const { iconName }: { iconName: IconName } = Astro.props;
+const { name, Icon, className } = IconsMapper[iconName];
+---
+
+<span class=`${className} flex gap-x-2 rounded-full text-xs py-2 px-2`>
+  <Icon class="size-4" />
+  <span>{name}</span>
+</span>

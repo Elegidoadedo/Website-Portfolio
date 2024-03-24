@@ -1,0 +1,22 @@
+---
+import { IconsMapper } from "./Tag.utils.astro";
+import type { OpenSourceProject } from "../content/projects.types";
+
+type Props = OpenSourceProject;
+
+const { iconName, image, name, link } = Astro.props;
+
+const Icon = iconName ? IconsMapper[iconName] : null;
+---
+
+<article
+  class="flex flex-col gap-8 bg-transparent/[0.3] p-8 rounded-xl items-center w-[200px] h-[200px] justify-end"
+>
+  {image && <img src={"images/tooljet-logo.png"} alt={name} class="w-40 " />}
+  {Icon && <Icon.Icon class=" h-20 w-20" />}
+  <a
+    href={link}
+    class="text-white bg-gray-900 outline-none ring-1 ring-gray-100 font-medium rounded-lg text-sm px-3 py-3 w-fit self-center neon-shadow"
+    >{name}</a
+  >
+</article>

@@ -1,0 +1,44 @@
+---
+import type { IconName } from "./Tag.types";
+import Tag from "./Tag.astro";
+type Props = {
+  name: string;
+  description: string;
+  link: string;
+  image: string;
+  tags: IconName[];
+};
+
+const { name, description, link, image } = Astro.props;
+---
+
+<article
+  class="w-full p-8 flex flex-wrap lg:flex-nowrap my-8 gap-8 bg-transparent/[0.3] rounded-xl"
+>
+  <section class="w-full lg:w-1/2">
+    <picture>
+      <img src={image} class="object-cover h-full shadow-xl rounded-xl" />
+    </picture>
+  </section>
+  <section class="w-full md:w-1/2 flex flex-col gap-4">
+    <h4 class="text-xl font-bold">{name}</h4>
+    <ul class="flex flex-row gap-x-2">
+      {
+        Astro.props.tags.map((tag) => (
+          <li>
+            <Tag iconName={tag} />
+          </li>
+        ))
+      }
+    </ul>
+    <p>{description}</p>
+
+    <a
+      href={link}
+      target="_blank"
+      class="text-white bg-gray-900 outline-none ring-1 ring-gray-100 font-medium rounded-lg text-sm px-10 py-2.5 me-2 mb-2 w-fit neon-shadow my-4"
+    >
+      Preview
+    </a>
+  </section>
+</article>

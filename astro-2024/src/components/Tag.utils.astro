@@ -1,0 +1,41 @@
+---
+import WorpressIcon from "../assets/icons/WordpressIcon.astro";
+import CloudinaryIcon from "../assets/icons/CloudinaryIcon.astro";
+import TelegramIcon from "../assets/icons/Telegram.astro";
+import NodeJs from "../assets/icons/Nodejs.astro";
+import TailwindCSS from "../assets/icons/TailwindCSS.astro";
+import AstroIcon from "../assets/icons/AstroIcon.astro";
+
+import type { TagMapper } from "./Tag.types";
+
+export const IconsMapper: TagMapper = {
+  WORDPRESS: {
+    Icon: WorpressIcon,
+    name: "Wordpress",
+    className: "bg-white text-black",
+  },
+  CLOUDINARY: {
+    Icon: CloudinaryIcon,
+  },
+  TELEGRAM: {
+    Icon: TelegramIcon,
+    name: "Telegram",
+    className: "bg-[#276b8f] text-white",
+  },
+  NODEJS: {
+    Icon: NodeJs,
+    name: "NodeJs",
+    className: "bg-[#245123] text-white",
+  },
+  ASTRO: {
+    Icon: AstroIcon,
+    name: "Astro",
+    className: "bg-black text-white",
+  },
+  TAILWIND: {
+    Icon: TailwindCSS,
+    name: "Tailwind CSS",
+    className: "bg-[#003159] text-white",
+  },
+};
+---

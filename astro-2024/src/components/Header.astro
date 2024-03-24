@@ -1,0 +1,31 @@
+---
+import socialMediaUrl from "../content/socialMediaUrl";
+---
+
+<header
+  class="fixed top-0 z-10 flex flex-wrap items-center justify-around w-full mx-auto py-2 progress gap-3"
+>
+  <span id="header-nav" class="text-center">ELEGIDO A DEDO</span>
+  <nav>
+    <ul class="flex justify-center md:justify-end gap-4 md:gap-12">
+      <li><a href="/">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href={socialMediaUrl.mail}>Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .progress {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    to {
+      @apply shadow-lg backdrop-blur bg-transparent/[0.3];
+    }
+  }
+</style>
