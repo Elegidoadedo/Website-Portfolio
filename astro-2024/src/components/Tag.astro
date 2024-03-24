@@ -1,22 +1,12 @@
 ---
-import WorpressIcon from "../assets/icons/WordpressIcon.astro";
-import type { Props } from "./Tag.types.ts";
+import { IconsMapper } from "./Tag.utils.astro";
+import type { IconName, Props } from "./Tag.types.ts";
 
-const IconsMapper = {
-  WORDPRESS: {
-    icon: WorpressIcon,
-    name: "Wordpress",
-    className: "bg-white text-black",
-  },
-};
-
-const { iconName } = Astro.props;
-const IconToRender = IconsMapper[iconName];
+const { iconName }: { iconName: IconName } = Astro.props;
+const { name, Icon, className } = IconsMapper[iconName];
 ---
 
-<span
-  class=`${IconToRender.className} flex gap-x-2 rounded-full text-xs py-1 px-2`
->
-  <IconToRender.icon class="size-4" />
-  <span>{IconToRender.name}</span>
+<span class=`${className} flex gap-x-2 rounded-full text-xs py-2 px-2`>
+  <Icon class="size-4" />
+  <span>{name}</span>
 </span>

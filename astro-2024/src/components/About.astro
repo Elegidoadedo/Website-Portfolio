@@ -4,26 +4,33 @@ import SectionTitle from "./SectionTitle.astro";
 
 <section id="about">
   <SectionTitle title="About me" icon="user" />
-  <section class="flex flex-wrap justify-between md:flex-nowrap gap-8">
-    <div>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-        asperiores impedit cupiditate natus quod officia distinctio, at repellat
-        quaerat exercitationem unde veritatis sunt porro consectetur provident
-        facilis in suscipit eos.
+  <section class="flex flex-wrap justify-between lg:flex-nowrap gap-8">
+    <div class="flex flex-col items-center justify-evenly">
+      <p class="text-balance leading-6 my-3">
+        I am a front-end developer with over 5 years of experience. I have been
+        working in companies, bringing solutions and improvements to products
+        and websites. Additionally, I enjoy contributing to open source
+        projects, where I can collaborate with others and make a positive
+        impact. I have a passion for creativity and enjoy exploring various
+        artistic mediums such as 3D printing and painting.
       </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-        asperiores impedit cupiditate natus quod officia distinctio, at repellat
-        quaerat exercitationem unde veritatis sunt porro consectetur provident
-        facilis in suscipit eos.
+      <p class="text-balance leading-6 my-3">
+        In my free time, I also engage in historical fencing and archery. I am a
+        naturally curious individual and thrive on continuous learning. I find
+        it difficult to stay idle for long periods of time.
+      </p>
+      <p class="text-balance leading-6 my-3">
+        When I'm not coding or pursuing my artistic hobbies, you can find me
+        hiking in the mountains or reading a good book. I believe that
+        exploration and knowledge are the keys to personal growth and
+        fulfillment.
       </p>
     </div>
     <picture>
       <img
         src="images/about-me-camino.webp"
         alt="Profile picture"
-        class="rounded-lg rotate-6 hover:rotate-0 transition-transform duration-300 ease-in-out md:scale-110 md:hover:scale-105 border-gray-800 shadow-2xl"
+        class="rounded-lg mb-6 md:mb-0 rotate-6 hover:rotate-0 transition-transform duration-300 ease-in-out md:h-full md:w-full md:hover:scale-105 border-gray-800 shadow-2xl"
         width="900"
         aspect-ratio="1/1"
       />

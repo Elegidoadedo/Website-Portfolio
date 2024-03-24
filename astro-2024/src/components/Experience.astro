@@ -1,5 +1,33 @@
 ---
 import SectionTitle from "./SectionTitle.astro";
+import jobs from "../content/jobs";
+import Code from "../assets/icons/Code.astro";
+import Server from "../assets/icons/Server.astro";
 ---
 
 <SectionTitle title="Experience" id="'experience" icon="user" />
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 mt-8">
+  {
+    jobs.map((job) => {
+      return (
+        <li class="ms-8 pb-8">
+          <span class="absolute flex items-center justify-center w-6 h-6  rounded-full -start-3 ring-8  ring-gray-900 bg-gray-900">
+            {job.icon === "code" ? (
+              <Code class="w-5" />
+            ) : (
+              <Server class="w-5" />
+            )}
+          </span>
+          <h3 class="mb-2 text-lg font-semibold text-white">
+            {job.position} at {job.company}
+          </h3>
+          <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+            {job.start} - {job.end || "Present"}
+          </time>
+          <p class="text-base font-normal text-gray-400">{job.description}</p>
+        </li>
+      );
+    })
+  }
+</ol>

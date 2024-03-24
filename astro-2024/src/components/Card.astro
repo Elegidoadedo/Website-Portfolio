@@ -10,28 +10,19 @@ type Props = {
 };
 
 const { name, description, link, image } = Astro.props;
-console.log("props", Astro.props);
 ---
 
 <article
-  class="w-full p-8 flex flex-rap md:flex-nowrap card my-8 gap-4 bg-transparent/[0.3]"
+  class="w-full p-8 flex flex-wrap lg:flex-nowrap my-8 gap-8 bg-transparent/[0.3] rounded-xl"
 >
-  <section class="w-full md:w-1/2">
+  <section class="w-full lg:w-1/2">
     <picture>
-      <div
-        class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:hover:-translate-y-1 md:hover:shadow-2xl border border-gray-800 hover:border-gray-700 hover:bg-gray-800/50"
-      >
-        <img
-          src={image}
-          class="object-cover object-top h-56 transition duration-500 sm:h-full md:scale-105 md:hover:scale-100"
-        />
-      </div>
+      <img src={image} class="object-cover h-full shadow-xl rounded-xl" />
     </picture>
   </section>
-  <section class="w-full md:w-1/2 flex flex-col gap-2">
-    <h4 class="text-xl font-bold mb-4">{name}</h4>
-    <p>{description}</p>
-    <ul class="flex flex-row mb-2 gap-x-2">
+  <section class="w-full md:w-1/2 flex flex-col gap-4">
+    <h4 class="text-xl font-bold">{name}</h4>
+    <ul class="flex flex-row gap-x-2">
       {
         Astro.props.tags.map((tag) => (
           <li>
@@ -40,12 +31,14 @@ console.log("props", Astro.props);
         ))
       }
     </ul>
-  </section>
+    <p>{description}</p>
 
-  <style>
-    .card {
-      border: 1px solid #d69111;
-      border-radius: 8px;
-    }
-  </style>
+    <a
+      href={link}
+      target="_blank"
+      class="text-white bg-gray-900 outline-none ring-1 ring-gray-100 font-medium rounded-lg text-sm px-10 py-2.5 me-2 mb-2 w-fit neon-shadow my-4"
+    >
+      Preview
+    </a>
+  </section>
 </article>

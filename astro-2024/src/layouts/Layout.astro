@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 interface Props {
   title: string;
 }
@@ -20,10 +21,11 @@ const { title } = Astro.props;
   <body>
     <Header />
     <main
-      class="section py-16 md:py-36 px-12 scroll-m-20 w-full mx-auto container lg:max-w-5xl md:max-w-3xl"
+      class="section pt-16 pb-8 md:pt-36 md:pb-12 px-12 scroll-m-20 w-full mx-auto container lg:max-w-5xl md:max-w-3xl"
     >
       <slot />
     </main>
+    <Footer />
   </body>
 </html>
 
@@ -37,11 +39,11 @@ const { title } = Astro.props;
     padding: 0;
     height: 100%;
     width: 100%;
-    margin: 12px 0;
+    padding: 12px 0 0;
     min-height: 100vh;
     min-width: 100vw;
-
-    background: linear-gradient(45deg, #54416c 15%, #384569 30%, #192032 85%)
+    overscroll-behavior: none;
+    background: linear-gradient(45deg, #2f0662 15%, #051e64 30%, #192032 85%)
       no-repeat;
     color: #fff;
   }
@@ -53,5 +55,15 @@ const { title } = Astro.props;
   }
   h3 {
     font-size: 32px;
+  }
+
+  .neon-shadow {
+    border: 1px solid #192032;
+    border-radius: 8px;
+    &:hover {
+      border: 1px solid #192032;
+      background-color: #192032;
+      box-shadow: 0 0 20px #d69111;
+    }
   }
 </style>

@@ -1,0 +1,36 @@
+---
+import Linkedin from "../assets/icons/Linkedin.astro";
+import Github from "../assets/icons/Github.astro";
+import Thingiverse from "../assets/icons/Thingiverse.astro";
+import Mail from "../assets/icons/Mail.astro";
+import Instagram from "../assets/icons/Instagram.astro";
+import socialMediaUrl from "../content/socialMediaUrl";
+type Props = {
+  size?: "large" | "short";
+};
+
+const { size } = Astro.props;
+const sizeClasses = {
+  large: "w-8 md:w-10 h-8 md:h-10 ",
+  short: "w-6 md:w-10 h-6 md:h-10 ",
+};
+const sizeClass = (size && sizeClasses[size]) || sizeClasses.large;
+---
+
+<div class="flex flex-row flex-nowrap gap-6">
+  <a href={socialMediaUrl.linkedin} target="_blank">
+    <Linkedin class=`${sizeClass} hover:scale-110` />
+  </a>
+  <a href={socialMediaUrl.github} target="_blank">
+    <Github class=`${sizeClass} hover:scale-110` />
+  </a>
+  <a href={socialMediaUrl.thingiverse} target="_blank">
+    <Thingiverse class=`${sizeClass} hover:scale-110` />
+  </a>
+  <a href={socialMediaUrl.instagram} target="_blank">
+    <Instagram class=`${sizeClass} hover:scale-110` />
+  </a>
+  <a href={socialMediaUrl.github} target="_blank">
+    <Mail class=`${sizeClass} hover:scale-110` />
+  </a>
+</div>

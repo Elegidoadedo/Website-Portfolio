@@ -1,4 +1,10 @@
-<div class="flex flex-wrap w-auto py-16 items-center justify-center gap-12">
+---
+import SocialMedia from "./SocialMedia.astro";
+---
+
+<div
+  class="flex flex-wrap w-auto py-16 items-center justify-center gap-12 text-balance"
+>
   <picture>
     <img
       width="200"
@@ -9,8 +15,9 @@
   </picture>
   <section>
     <h2>Hello world! I'm Jose.</h2>
-    <h1>a <span class="glowText">Front-end Developer</span></h1>
-    <h2>Based in Barcelona</h2>
+    <h1><span class="glowText">Front-end Developer</span></h1>
+    <h2 class="mb-8">Based in Barcelona</h2>
+    <SocialMedia />
   </section>
 </div>
 
@@ -18,7 +25,7 @@
   .glowText {
     text-transform: uppercase;
     color: #d69111;
-    animation: glow 1.5s ease-in-out infinite alternate;
+    animation: glow 1.2s linear infinite alternate;
   }
   @keyframes glow {
     from {
