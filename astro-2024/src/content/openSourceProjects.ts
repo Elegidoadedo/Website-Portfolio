@@ -9,7 +9,7 @@ const OpenSourceProjects: OpenSourceProject[] = [
   {
     name: "Tool Jet",
     link: "https://github.com/ToolJet/ToolJet",
-    image: "/images/tooljet-logo.png",
+    iconName: "TOOLJET",
   },
 ];
 export default OpenSourceProjects;

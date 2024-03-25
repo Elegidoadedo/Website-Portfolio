@@ -17,7 +17,11 @@ const { name, description, link, image } = Astro.props;
 >
   <section class="w-full lg:w-1/2">
     <picture>
-      <img src={image} class="object-cover h-full shadow-xl rounded-xl" />
+      <img
+        src={image}
+        class="object-cover h-full shadow-xl rounded-xl"
+        alt=`Preview image for ${name} project`
+      />
     </picture>
   </section>
   <section class="w-full md:w-1/2 flex flex-col gap-4">
