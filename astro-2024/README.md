@@ -1,54 +1,26 @@
-# Astro Starter Kit: Basics
+# Welcome to the Awesome Portfolio 2023!
 
-```sh
-npm create astro@latest -- --template basics
-```
+🎉 Thank you for visiting my portfolio repository! I'm excited to have you here. 🚀
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## How to Contribute
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Contributions to my portfolio are more than welcome! Whether you want to fix a typo, add a new project, or suggest an improvement, I appreciate your help. Follow the steps below to contribute:
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+1. **Fork** this repository to your own GitHub account.
+2. **Clone** the forked repository to your local machine.
+3. Create a new branch: `git checkout -b your-branch-name`.
+4. Make your changes and improvements.
+5. Commit your changes: `git commit -m 'Add your commit message here'`.
+6. Push your changes to your forked repository: `git push origin your-branch-name`.
+7. Open a **Pull Request** (PR) from your forked repository to my main repository.
+8. Sit back, relax, and wait for me to review your PR. 🍿
 
-## 🚀 Project Structure
+## Get in Touch
 
-Inside of your Astro project, you'll see the following folders and files:
+Have questions, suggestions, or just want to say hi? Feel free to reach out to me on . I'd love to hear from you!
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## License
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Feel free to use the code and content as inspiration for your own projects.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Happy coding! 😄
