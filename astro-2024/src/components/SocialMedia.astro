@@ -18,19 +18,35 @@ const sizeClass = (size && sizeClasses[size]) || sizeClasses.large;
 ---
 
 <div class="flex flex-row flex-nowrap gap-6">
-  <a href={socialMediaUrl.linkedin} target="_blank">
+  <a
+    href={socialMediaUrl.linkedin}
+    target="_blank"
+    aria-label="Visit my Linkedin profile"
+  >
     <Linkedin class=`${sizeClass} hover:scale-110` />
   </a>
-  <a href={socialMediaUrl.github} target="_blank">
+  <a
+    href={socialMediaUrl.github}
+    target="_blank"
+    aria-label="Visit my Github profile"
+  >
     <Github class=`${sizeClass} hover:scale-110` />
   </a>
-  <a href={socialMediaUrl.thingiverse} target="_blank">
+  <a
+    href={socialMediaUrl.thingiverse}
+    target="_blank"
+    aria-label="Visit my Thingiverse profile"
+  >
     <Thingiverse class=`${sizeClass} hover:scale-110` />
   </a>
-  <a href={socialMediaUrl.instagram} target="_blank">
+  <a
+    href={socialMediaUrl.instagram}
+    target="_blank"
+    aria-label="Visit my creative Instagram profile"
+  >
     <Instagram class=`${sizeClass} hover:scale-110` />
   </a>
-  <a href={socialMediaUrl.github} target="_blank">
+  <a href={socialMediaUrl.mail} target="_blank" aria-label="Send me a email">
     <Mail class=`${sizeClass} hover:scale-110` />
   </a>
 </div>

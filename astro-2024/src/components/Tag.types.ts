@@ -4,7 +4,8 @@ export type IconName =
   | "TELEGRAM"
   | "CLOUDINARY"
   | "ASTRO"
-  | "TAILWIND";
+  | "TAILWIND"
+  | "TOOLJET";
 
 export type Props = {
   iconName: IconName;
