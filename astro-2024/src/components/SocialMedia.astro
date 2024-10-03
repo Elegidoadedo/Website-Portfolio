@@ -5,6 +5,7 @@ import Thingiverse from "../assets/icons/Thingiverse.astro";
 import Mail from "../assets/icons/Mail.astro";
 import Instagram from "../assets/icons/Instagram.astro";
 import socialMediaUrl from "../content/socialMediaUrl";
+import Medium from "../assets/icons/Medium.astro";
 type Props = {
   size?: "large" | "short";
 };
@@ -48,5 +49,8 @@ const sizeClass = (size && sizeClasses[size]) || sizeClasses.large;
   </a>
   <a href={socialMediaUrl.mail} target="_blank" aria-label="Send me a email">
     <Mail class=`${sizeClass} hover:scale-110` />
+  </a>
+  <a href={socialMediaUrl.medium} target="_blank" aria-label="Visit my posts in Medium">
+    <Medium class=`${sizeClass} hover:scale-110 stroke:white` />
   </a>
 </div>
