@@ -1,0 +1,33 @@
+---
+
+import SectionTitle from "./sectionTitle/SectionTitle.astro";
+import OpenSourceCard from "./OpenSourceCard.astro";
+import {mediumGet} from "../api/mediumGet";
+import MediumCard from "./MediumCard.astro";
+const {items: posts} = await mediumGet();
+
+
+
+---
+
+<>
+  <SectionTitle title="Last Medium Posts" id="medium" icon="user" />
+  <div class="flex flex-col md:flex-row items-start gap-8 flex-wrap">
+
+  {
+    posts.map((post: any) => 
+      {
+        const regex = /<img\s+[^>]*src="([^"]*)"/;
+        const match = regex.exec(post.description);
+        const firstImage = match ? match[1] : '';
+       
+       return  <MediumCard
+          name={post.title}
+          link={post.link}
+          image={firstImage}
+        />
+      }
+    )
+  }
+  </div>
+</>

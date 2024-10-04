@@ -1,4 +1,4 @@
-import type { IconName } from "../components/Tag.types";
+import type { IconName } from "../components/tag/Tag.types";
 
 export type Project = {
   name: string;
